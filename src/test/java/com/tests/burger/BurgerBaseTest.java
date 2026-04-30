@@ -14,10 +14,10 @@ public class BurgerBaseTest {
     Burger burgerForTest = new Burger();
 
     @Mock
-    Database databaseForBurger = new Database();
+    List<Bun> bunsForTest = new Database().availableBuns();
 
-    List<Bun> bunsForTest = databaseForBurger.availableBuns();
-    List<Ingredient> ingredientsForTest = databaseForBurger.availableIngredients();
+    @Mock
+    List<Ingredient> ingredientsForTest = new Database().availableIngredients();
 
 }
 
